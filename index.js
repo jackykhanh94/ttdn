@@ -1,7 +1,6 @@
 var fetch = require('axios')
 var async = require('async')
 var cp = require('child_process')
-var city = require('./data/city.json')
 var colors = require('./colors')
 const { writeFileSync, appendFileSync, appendFile, writeFile, readdirSync, lstatSync } = require('fs')
 var rootUrl = 'https://thongtindoanhnghiep.co'
@@ -123,6 +122,21 @@ const CITIES = {}
 })
 
 ;(async() => {
-    var pros = readdirSync('./data').filter(f => lstatSync('./data/' + f).isDirectory()).map(f => './data/' + f)
-    console.log(pros)
+    var provs = readdirSync('./data').filter(f => lstatSync('./data/' + f).isDirectory())
+    var tasks = provs.map((prov) => {
+        return (callback) => {
+            console.log('Download', prov)
+            var p = cp.spawn('node', ['./ttdn.js', 'dl', prov], { stdio: 'pipe' })
+            p.stdout.on('data', (data) => {
+                console.log(data.toString())
+            })
+            p.stderr.on('error', (error) => {
+                console.log(error)
+            })
+            p.on('exit', () => {
+                callback(null)
+            })
+        }
+    })
+    await async.parallelLimit(tasks, 5)
 })()

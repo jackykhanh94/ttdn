@@ -7,5 +7,31 @@
     "QuanHuyenID": 842,
     "TinhThanhID": 35,
     "Url": "https://thongtindoanhnghiep.co/api/company?l=/an-giang/ap-long-thanh-b/chua-ro",
-    "Total": 1
+    "Total": 1,
+    "List": [
+        {
+            "Type": 11,
+            "SolrID": "/1600901495-doanh-nghiep-tu-nhan-bach-viet",
+            "ID": 0,
+            "MaSoThue": "1600901495",
+            "NgayCap": "2007-08-03T00:00:00Z",
+            "Title": "Doanh Nghiệp Tư Nhân Bách Việt.",
+            "DiaChiCongTy": "Số 169B, ấp Long Thạnh B, Tỉnh An Giang",
+            "Created": "2018-04-20T11:01:45Z",
+            "Updated": "2021-04-20T13:05:25Z",
+            "IsDelete": false,
+            "RequestChanged": false,
+            "ExitsInGDT": false,
+            "SourceID": 0,
+            "TinhThanhID": 0,
+            "TinhThanhTitle": "An Giang",
+            "TinhThanhTitleAscii": "/an-giang",
+            "QuanHuyenID": 0,
+            "DSTags": [
+                "1600901495",
+                "An Giang",
+                null
+            ]
+        }
+    ]
 }

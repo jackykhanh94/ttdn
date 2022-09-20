@@ -55,6 +55,10 @@ module.exports = async function (dataPath) {
     var tasks = files.map((f) => {
         var ward = require(f)
         return (callback) => {
+            if (ward.Total == ward.List?.length) {
+                console.log(colors.toYellow('IGNORE DOWNLOAD DONE'), colors.toCyan(ward.Title))
+                return callback(null)
+            }
             fetchUtilLast(ward.SolrID)
                 .then((result) => {
                     var newWard = {
