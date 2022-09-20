@@ -61,8 +61,8 @@ module.exports = async function (dataPath) {
                         ...ward,
                         List: result
                     }
-                    writeFile(dataPath, JSON.stringify(newWard), (err) => {
-                        console.log('  SAVE', dataPath)
+                    writeFile(f, JSON.stringify(newWard), (err) => {
+                        console.log('  SAVE', f)
                         if (err) return callback(err)
                         callback(null, newWard)
                     })
