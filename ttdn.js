@@ -2,6 +2,7 @@
 var colors = require('./colors')
 var fetch = require('./fetch')
 var fs = require('fs')
+var path = require('path')
 const { spawn } = require('child_process')
 require('yargs')
   .scriptName("ttdn")
@@ -33,12 +34,12 @@ require('yargs')
         return console.log(colors.toRed('NOT FOUND:'), colors.toYellow(dataPath))
     }
     console.log(colors.toGreen('Download:'), colors.toMagenta(tinhthanh))
-    fetch(dataPath)
+    fetch(path.resolve(dataPath))
   })
   .command('init', 'Init data', (yargs) => {
     
   }, (args) => {
-    var proc = spawn('unzip', ['-o', 'data.zip', '-d', '.'], { stdio: 'pipe' })
+    var proc = spawn('unzip', ['-o', __dirname + 'data.zip', '-d', '.'], { stdio: 'pipe' })
     proc.stdout.on('data', function (data) {
       console.log(data.toString());
     });
