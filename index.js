@@ -123,9 +123,10 @@ const CITIES = {}
 
 ;(async() => {
     var provs = readdirSync('./data').filter(f => lstatSync('./data/' + f).isDirectory())
-    var tasks = provs.map((prov) => {
+    var slice = provs.slice(process.argv[2], process.argv[3])
+    console.log('Download list: ', colors.toYellow(slice.join(',')), 'from', process.argv[2], 'to', process.argv[3])
+    var tasks = slice.map((prov) => {
         return (callback) => {
-            console.log('Download', prov)
             var p = cp.spawn('node', ['./ttdn.js', 'dl', prov], { stdio: 'pipe' })
             p.stdout.on('data', (data) => {
                 console.log(data.toString())

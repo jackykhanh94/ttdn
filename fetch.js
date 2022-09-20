@@ -56,7 +56,7 @@ module.exports = async function (dataPath) {
         var ward = require(f)
         return (callback) => {
             if (ward.Total == ward.List?.length) {
-                console.log(colors.toYellow('IGNORE DOWNLOAD DONE'), colors.toCyan(ward.Title))
+                // console.log(colors.toYellow('  Ignore'), colors.toCyan(ward.Title))
                 return callback(null)
             }
             fetchUtilLast(ward.SolrID)
@@ -76,5 +76,5 @@ module.exports = async function (dataPath) {
     })
 
     await async.parallelLimit(tasks, 50)
-    console.log('DONE', dataPath)
+    // console.log('DONE', dataPath)
 }
