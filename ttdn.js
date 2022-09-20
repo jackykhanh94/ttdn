@@ -39,7 +39,7 @@ require('yargs')
   .command('init', 'Init data', (yargs) => {
     
   }, (args) => {
-    var proc = spawn('unzip', ['-o', __dirname + 'data.zip', '-d', '.'], { stdio: 'pipe' })
+    var proc = spawn('unzip', ['-o', path.resolve(__dirname, 'data.zip'), '-d', '.'], { stdio: 'pipe' })
     proc.stdout.on('data', function (data) {
       console.log(data.toString());
     });
