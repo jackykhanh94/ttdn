@@ -1,6 +1,6 @@
 {
   "name": "ttdn",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -8,8 +8,13 @@
   "repository": "https://github.com/jackykhanh94/ttdn.git",
   "author": "jackykhanh94 <jackykhanh94@gmail.com>",
   "license": "MIT",
+  "bin": {
+    "ttdn": "ttdn.js"
+  },
   "dependencies": {
     "async": "^3.2.4",
-    "axios": "^0.27.2"
+    "axios": "^0.27.2",
+    "glob": "^8.0.3",
+    "yargs": "^17.5.1"
   }
 }
