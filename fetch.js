@@ -2,6 +2,7 @@ var async = require('async')
 var glob = require('glob')
 var cp = require('child_process')
 var colors = require('./colors')
+var clean = require('./clean')
 const { writeFileSync, appendFileSync, appendFile, writeFile, readdirSync, lstatSync } = require('fs')
 const path = require('path')
 var reqUrl = 'https://thongtindoanhnghiep.co/api/company?l={path}&r=100&p={page}'
@@ -41,14 +42,6 @@ async function fetchUtilLast(lpath) {
     }
     console.log(colors.toBlue('  [fetchUtilLast][FINISH]:'), lpath)
     return result.map(f => clean(f));
-}
-function clean(obj) {
-    for (var propName in obj) {
-        if (obj[propName] === null || obj[propName] === undefined || obj[propName].length === 0 || obj[propName] === '') {
-            delete obj[propName];
-        }
-    }
-    return obj
 }
 module.exports = async function (dataPath) {
     var files = getAllJsonFiles(dataPath)
