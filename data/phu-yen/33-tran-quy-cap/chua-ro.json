@@ -1,11 +1,1 @@
-{
-    "ID": 23606,
-    "SolrID": "/phu-yen/33-tran-quy-cap/chua-ro",
-    "Title": "Chưa rõ",
-    "TinhThanhTitle": "Phú Yên",
-    "QuanHuyenTitle": "33 Trần Quý Cáp",
-    "QuanHuyenID": 894,
-    "TinhThanhID": 39,
-    "Url": "https://thongtindoanhnghiep.co/api/company?l=/phu-yen/33-tran-quy-cap/chua-ro",
-    "Total": 1
-}
+{"ID":23606,"SolrID":"/phu-yen/33-tran-quy-cap/chua-ro","Title":"Chưa rõ","TinhThanhTitle":"Phú Yên","QuanHuyenTitle":"33 Trần Quý Cáp","QuanHuyenID":894,"TinhThanhID":39,"Url":"https://thongtindoanhnghiep.co/api/company?l=/phu-yen/33-tran-quy-cap/chua-ro","Total":1,"List":[{"Type":11,"SolrID":"/4400408263-cong-ty-tnhh-kinh-doanh-go-ghep-binh-phu","ID":0,"MaSoThue":"4400408263","NgayCap":"2007-09-18T00:00:00Z","Title":"Công Ty TNHH Kinh Doanh Gỗ Ghép Bình Phú","DiaChiCongTy":"33 Trần Quý Cáp, Tỉnh Phú Yên","Created":"2015-11-14T06:03:37Z","Updated":"2020-05-22T16:05:25Z","IsDelete":false,"RequestChanged":false,"ExitsInGDT":false,"SourceID":0,"TinhThanhID":0,"TinhThanhTitle":"Phú Yên","TinhThanhTitleAscii":"/phu-yen","QuanHuyenID":0,"NganhNgheTitle":"Bán lẻ hàng hóa khác trong các cửa hàng chuyên doanh","NganhNgheTitleAscii":"/nganh-nghe/ban-le-hang-hoa-khac-trong-cac-cua-hang-chuyen-doanh","DSTags":["4400408263","Phú Yên",null]}]}
